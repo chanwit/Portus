@@ -105,4 +105,4 @@ jwt_expiration_time:
 
 # The FQDN of the machine where Portus is being deployed.
 machine_fqdn:
-  value: "portus.test.lan"
+  value: "registry.swasd.tools"

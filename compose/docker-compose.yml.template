@@ -31,10 +31,15 @@ registry:
   image: library/registry:2.3.1
   volumes:
     - /registry_data
+    - ./certs:/certs
     - ./compose/registry/portus.crt:/etc/docker/registry/portus.crt:ro
     - ./compose/registry/config.yml:/etc/docker/registry/config.yml:ro
+  environment:
+    - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/fullchain.pem
+    - REGISTRY_HTTP_TLS_KEY=/certs/key.pem
   ports:
-    - 5000:5000
+    - 443:5000
     - 5001:5001 # required to access debug service
   links:
     - web
+
