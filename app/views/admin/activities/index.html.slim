@@ -1,11 +1,11 @@
 .panel.panel-default
   .panel-heading
     h5
-      | All activities
+      | กิจกรรมทั้งหมด
       .pull-right
-        a.btn.btn-link.btn-xs[role="button" href="#{url_for(admin_activities_path(format: :csv))}" title="Download in CSV format"]
+        a.btn.btn-link.btn-xs[role="button" href="#{url_for(admin_activities_path(format: :csv))}" title="ดาวน์โหลดในแบบ CSV"]
           i.fa.fa-download
-          | Download CSV
+          | ดาวน์โหลด CSV
   .panel-body
     ul.activity
       - @activities.each do |activity|

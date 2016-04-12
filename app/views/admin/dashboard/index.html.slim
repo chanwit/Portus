@@ -2,19 +2,19 @@
   .alert.alert-danger.fade.in.text-left.alert-dismissible
     button.close data-dismiss="alert" type="button"
       span aria-hidden="true" &times;
-      span.sr-only Close
+      span.sr-only ปิด
     .row
       .alert-icon.pull-left
         i.fa.fa-exclamation-circle.fa-3x
       .pull-left
         p
-          | The Portus user does not exist!
+          | ไม่พบผู้ใช้ Portus!
 
 .row
   .col-md-3.col-xs-6.registries
     .panel-overview
       .panel-heading
-        = link_to 'Registry', admin_registries_path
+        = link_to 'แหล่งเก็บ', admin_registries_path
       .panel-body
         .row
           .col-xs-4
@@ -25,7 +25,7 @@
   .col-md-3.col-xs-6.users
     .panel-overview
       .panel-heading
-        = link_to 'Users', admin_users_path
+        = link_to 'ผู้ใช้', admin_users_path
       .panel-body
         .row
           .col-xs-4
@@ -36,7 +36,7 @@
   .col-md-3.col-xs-6.teams
     .panel-overview
       .panel-heading
-        = link_to 'Teams', admin_teams_path
+        = link_to 'ทีม', admin_teams_path
       .panel-body
         .row
           .col-xs-4
@@ -47,7 +47,7 @@
   .col-md-3.col-xs-6.namespaces
     .panel-overview
       .panel-heading
-        = link_to 'Namespaces', admin_namespaces_path
+        = link_to 'หมวดแหล่งเก็บ', admin_namespaces_path
       .panel-body
         .row
           .col-xs-4
@@ -58,12 +58,12 @@
 .panel.panel-default
   .panel-heading
     h5
-      | Recent activities
+      | กิจกรรมล่าสุด
       .pull-right
-        = link_to "View all activities", admin_activities_path, class: "btn btn-link btn-xs"
+        = link_to "ดูกิจกรรมทั้งหมด", admin_activities_path, class: "btn btn-link btn-xs"
   .panel-body
     - if @recent_activities.empty?
-      p No activities in the last 24 hours.
+      p ไม่มีกิจกรรมใน 24 ชั่วโมงที่ผ่านมา
     - else
       ul.activity
         - @recent_activities.each do |activity|
