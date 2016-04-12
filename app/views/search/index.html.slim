@@ -1,16 +1,16 @@
 .panel.panel-default
   .panel-heading
-    h5 Search results
+    h5 ผลการค้นหา
   .panel-body
     - if @repositories.empty?
-      p No match found.
+      p ไม่พบแหล่งเก็บ
     - else
       .table-responsive
         table.table.table-striped.table-hover
           thead
             tr
-              th Namespace
-              th Repository
+              th หมวด
+              th แหล่งเก็บ
           tbody
             - @repositories.each do |repository|
               tr
