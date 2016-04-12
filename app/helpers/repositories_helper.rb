@@ -4,7 +4,7 @@
 module RepositoriesHelper
   # Renders a push activity, that is, a repository has been pushed.
   def render_push_activity(activity)
-    owner = content_tag(:strong, "#{fetch_owner(activity)} pushed ")
+    owner = content_tag(:strong, "#{fetch_owner(activity)} ผลักขึ้น ")
 
     namespace = render_namespace(activity)
     namespace += " / " unless namespace.empty?

@@ -2,7 +2,7 @@
   .col-md-8
     .panel.panel-default
       .panel-heading
-        h5 Recent activities
+        h5 กิจกรรมล่าสุด
       .panel-body
         ul.activity
           - @recent_activities.each do |activity|
@@ -10,15 +10,15 @@
   .col-md-4
     #repositories_sidebar.panel.panel-default
       .panel-heading
-        h5 Repositories
+        h5 แหล่งเก็บ
 
         ul.nav.nav-tabs{role="tablist"}
           li.active{role="presentation"}
-            a{href="#all" aria-controls="all" role="tab" data-toggle="tab"} All
+            a{href="#all" aria-controls="all" role="tab" data-toggle="tab"} ทั้งหมด
           li{role="presentation"}
-            a{href="#starred" aria-controls="starred" role="tab" data-toggle="tab"} Starred
+            a{href="#starred" aria-controls="starred" role="tab" data-toggle="tab"} ติดดาว
           li{role="presentation"}
-            a{href="#personal" aria-controls="personal" role="tab" data-toggle="tab"} Personal
+            a{href="#personal" aria-controls="personal" role="tab" data-toggle="tab"} ส่วนตัว
       .panel-body.table-responsive
         .tab-content
           #all.tab-pane.active{role="tabpanel"}

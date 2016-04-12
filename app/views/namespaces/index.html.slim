@@ -1,12 +1,12 @@
 span
-  a[data-placement="right" data-toggle="popover" data-container="span" data-content="A namespace groups a series of repositories." data-original-title="What's this?" tabindex="0"]
+  a[data-placement="right" data-toggle="popover" data-container="span" data-content="หมวดแหล่งเก็บ จัดกลุ่มแหล่งเก็บให้เป็นหมวดหมู่" data-original-title="คืออะไร?" tabindex="0"]
     i.fa.fa-info-circle
-    | What's this?
+    | คืออะไร?
 
 .panel.panel-default
   .panel-heading
     h5
-      ' Special namespaces
+      ' หมวดพิเศษ
   .panel-body
     .table-responsive
       table.table.table-stripped.table-hover
@@ -16,10 +16,10 @@ span
         col.col-10
         thead
           tr
-            th Name
-            th Repositories
-            th Created
-            th Public
+            th ชื่อหมวด
+            th จำนวนแหล่งเก็บ
+            th สร้างเมื่อ
+            th เปิดเผย
         tbody
           - @special_namespaces.each do |namespace|
             = render partial: 'namespaces/namespace', locals: {namespace: namespace}
@@ -47,12 +47,12 @@ span
 .panel.panel-default
   .panel-heading
     h5
-      ' Namespaces you have access to
+      ' หมวดแหล่งเก็บที่เข้าถึงได้
       - if Registry.any?
         .pull-right
           a#add_namespace_btn.btn.btn-xs.btn-link.js-toggle-button[role="button"]
             i.fa.fa-plus-circle
-            | Create new namespace
+            | สร้างหมวดแหล่งเก็บใหม่
   .panel-body
     .table-responsive
       table.table.table-stripped.table-hover
@@ -62,10 +62,10 @@ span
         col.col-10
         thead
           tr
-            th Name
-            th Repositories
-            th Created At
-            th Public
+            th ชื่อหมวด
+            th จำนวนแหล่งเก็บ
+            th สร้างเมื่อ
+            th เปิดเผย
         tbody#accessible-namespaces
           - @namespaces.each do |namespace|
             = render partial: 'namespaces/namespace', locals: {namespace: namespace}
