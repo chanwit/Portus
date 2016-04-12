@@ -1,24 +1,24 @@
 .panel.panel-default
   .panel-heading
     h5
-      'Registry:
+      'ตัวคุมทะเบียน:
       strong
         = @registry.name
   .panel-body
     = form_for @registry, url: admin_registry_path(@registry.id), html: {class: 'form-horizontal', role: 'form'} do |f|
       .form-group
-        = f.label :name, {class: 'control-label col-md-2'}
+        = f.label :name, "ชื่อ", {class: 'control-label col-md-2'}
         .col-md-7
           = f.text_field(:name, class: 'form-control', required: true, value: @registry.name)
       - if @can_change_hostname
         .form-group
-          = f.label :hostname, {class: 'control-label col-md-2'}
+          = f.label :hostname, "เครื่อง", {class: 'control-label col-md-2'}
           .col-md-7
             = f.text_field(:hostname, class: 'form-control', placeholder: 'registry.test.lan', required: true)
       .form-group
-        = f.label :use_ssl, "Use SSL", {class: 'control-label col-md-2', title: 'Set this to enable SSL in the communication between Portus and the Registry', checked: @registry.use_ssl?}
+        = f.label :use_ssl, "ใช้ SSL", {class: 'control-label col-md-2', title: 'ตั้งค่านี้เพื่อเปิดใช้การเชื่อมต่อแบบ SSL ระหว่าง โกดัง และ ตัวคุมทะเบียน', checked: @registry.use_ssl?}
         .col-md-7
           = f.check_box(:use_ssl)
       .form-group
         .col-md-offset-2.col-md-7
-          = f.submit('Update', class: 'btn btn-primary')
+          = f.submit('ปรับปรุง', class: 'btn btn-primary')
