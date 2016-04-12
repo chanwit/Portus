@@ -1,7 +1,7 @@
 .panel.panel-default
   .panel-heading
     h5
-      ' Special namespaces
+      ' หมวดแหล่งเก็บพิเศษ
   .panel-body
     .table-responsive
       table.table.table-stripped.table-hover
@@ -11,10 +11,10 @@
         col.col-10
         thead
           tr
-            th Name
-            th Repositories
-            th Created At
-            th Public
+            th ชื่อหมวด
+            th จำนวนแหล่งเก็บ
+            th สร้างเมื่อ
+            th เปิดเผย
         tbody
           - @special_namespaces.each do |namespace|
             = render partial: 'namespaces/namespace', locals: {namespace: namespace}
@@ -22,7 +22,7 @@
 .panel.panel-default
   .panel-heading
     h5
-      ' Other namespaces
+      ' หมวดแหล่งเก็บอื่น ๆ
   .panel-body
     .table-responsive
       table.table.table-stripped.table-hover
@@ -32,10 +32,10 @@
         col.col-10
         thead
           tr
-            th Name
-            th Repositories
-            th Created At
-            th Public
+            th ชื่อหมวด
+            th จำนวนแหล่งเก็บ
+            th สร้างเมื่อ
+            th เปิดเผย
         tbody
           - @namespaces.each do |namespace|
             = render partial: 'namespaces/namespace', locals: {namespace: namespace}
